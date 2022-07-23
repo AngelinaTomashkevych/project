@@ -5,7 +5,8 @@ import classNames from 'classnames';
 import styles from './Input.module.scss';
 
 function Input(props) {
-  const { name, type, htmlFor, autoComplete, isRequired, classname } = props;
+  const { name, type, htmlFor, autoComplete, isRequired, classname, ...rest } =
+    props;
 
   const {
     register,
@@ -32,6 +33,7 @@ function Input(props) {
         {...register(name, {
           required: true,
         })}
+        {...rest}
       />
       <div>
         {errorName && (

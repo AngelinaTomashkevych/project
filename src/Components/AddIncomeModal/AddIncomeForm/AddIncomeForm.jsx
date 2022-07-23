@@ -5,6 +5,7 @@ import { closeModal } from 'redux/actions';
 
 import InputText from 'Components/Input/InputText';
 import InputNumber from 'Components/Input/InputNumber';
+import InputDate from 'Components/Input/InputDate';
 
 import { FIELD_NAMES } from '../constants';
 
@@ -23,6 +24,7 @@ function AddIncomeForm() {
     <form onSubmit={handleSubmit(submitForm)}>
       <InputText name={FIELD_NAMES.NAME} htmlFor="Название" isRequired />
       <InputNumber name={FIELD_NAMES.QUATITY} htmlFor="Сумма" isRequired />
+      <InputDate name={FIELD_NAMES.DATE} htmlFor="Дата" isRequired />
       <button type="submit">submit</button>
     </form>
   );

@@ -8,7 +8,11 @@ import { FIELD_NAMES } from '../constants';
 const validationSchema = yup
   .object({
     [FIELD_NAMES.NAME]: yup.string().required(ERRORS.REQUIRED),
-    [FIELD_NAMES.QUATITY]: yup.number().required(ERRORS.REQUIRED),
+    [FIELD_NAMES.QUATITY]: yup
+      .number()
+      .typeError(ERRORS.REQUIRED)
+      .required(ERRORS.REQUIRED),
+    [FIELD_NAMES.DATE]: yup.date().required(ERRORS.REQUIRED),
   })
   .required();
 

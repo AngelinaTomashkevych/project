@@ -15,6 +15,7 @@ module.exports = {
   rules: {
     'no-debugger': 'warn',
     'no-console': 'warn',
+    'no-unused-vars': 'warn',
     'react/react-in-jsx-scope': 'off',
     'comma-dangle': 'off',
     'space-before-function-paren': 'off',

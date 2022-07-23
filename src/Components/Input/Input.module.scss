@@ -1,26 +1,32 @@
+@import 'common/styles';
+
 .errorMessage {
-    color: red
+    color: $error-message-color;
 }
 
 .input {
+    padding: 5px;
     border: none;
     outline: none;
     border-radius: 3px;
-    box-shadow: 0 0 0 1px black;
+    box-shadow: $input-box-shadow;
+    margin-bottom: 10px;
+    width: calc((100%) - 10px);
 }
 
 .input:focus {
-    box-shadow: 0 0 0 2px blue;
+    box-shadow: $input-focus-box-shadow
 }
 
 .inputError {
-    box-shadow: 0 0 0 1px red;
+    box-shadow: $input-error-box-shadow;
 }
 
 .inputError:focus {
-    box-shadow: 0 0 0 2px red;
+    box-shadow: $input-error-focus-box-shadow;
 }
 
 .label {
     display: block;
+    margin-bottom: 5px;
 }

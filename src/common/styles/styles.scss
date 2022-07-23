@@ -1,3 +1,14 @@
+// modal colors
 $modal-backdrop-color: rgb(0, 0, 0, 0.5);
 $modal-close-button-color: rgb(255, 255, 255, 0.3);
 $modal-background-color: #ffffff;
+
+
+// used box-shadow as input outline
+$input-box-shadow: 0 0 0 1px black;
+$input-error-box-shadow: 0 0 0 1px red;
+$input-focus-box-shadow: 0 0 0 2px blue;
+$input-error-focus-box-shadow: 0 0 0 2px red;
+
+// fonts colors
+$error-message-color: red;
