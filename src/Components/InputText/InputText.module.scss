@@ -1,0 +1,26 @@
+.errorMessage {
+    color: red
+}
+
+.input {
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px black;
+}
+
+.input:focus {
+    box-shadow: 0 0 0 2px blue;
+}
+
+.inputError {
+    box-shadow: 0 0 0 1px red;
+}
+
+.inputError:focus {
+    box-shadow: 0 0 0 2px red;
+}
+
+.label {
+    display: block;
+}
