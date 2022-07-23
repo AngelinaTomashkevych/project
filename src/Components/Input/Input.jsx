@@ -6,7 +6,7 @@ import styles from './Input.module.scss';
 
 function Input(props) {
   const { name, type, htmlFor, autoComplete, isRequired, classname } = props;
-  console.log('classname', classname);
+
   const {
     register,
     formState: { errors },
