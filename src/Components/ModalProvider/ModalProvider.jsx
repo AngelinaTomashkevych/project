@@ -10,7 +10,7 @@ const rootModalRef = document.getElementById('root-modal');
 function ModalProvider({ children }) {
   const dispatch = useDispatch();
 
-  const closeModalHandler = (event) => {
+  const closeModalHandler = () => {
     dispatch(closeModal());
   };
 
@@ -20,7 +20,7 @@ function ModalProvider({ children }) {
 
   const getModalProvider = (children) => {
     return (
-      <div className={styles.modalBackDrop}>
+      <div className={styles.modalBackDrop} onClick={closeModalHandler}>
         <button
           type="button"
           onClick={closeModalHandler}

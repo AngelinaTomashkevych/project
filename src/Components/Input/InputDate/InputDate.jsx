@@ -12,7 +12,7 @@ import styles from './InputDate.module.scss';
 function InputDate(props) {
   const { name } = props;
   const { setValue } = useFormContext();
-
+  // FIXME: new Date() to format
   const [value, onChange] = useState(new Date());
   const [isVisible, setVisible] = useState(false);
 
