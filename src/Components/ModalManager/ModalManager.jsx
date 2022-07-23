@@ -1,7 +1,7 @@
-import { modals } from "constants/modalNames";
-import { useSelector } from "react-redux";
+import { modals } from 'constants/modalNames';
+import { useSelector } from 'react-redux';
 
-import { getModalName } from "redux/selectors";
+import { getModalName } from 'redux/selectors';
 
 function ModalManager() {
   const modalData = useSelector(getModalName);

@@ -1,11 +1,11 @@
-import { createPortal } from "react-dom";
-import { useDispatch } from "react-redux";
+import { createPortal } from 'react-dom';
+import { useDispatch } from 'react-redux';
 
-import { closeModal } from "redux/actions";
+import { closeModal } from 'redux/actions';
 
-import styles from "./ModalProvider.module.scss";
+import styles from './ModalProvider.module.scss';
 
-const rootModalRef = document.getElementById("root-modal");
+const rootModalRef = document.getElementById('root-modal');
 
 function ModalProvider({ children }) {
   const dispatch = useDispatch();

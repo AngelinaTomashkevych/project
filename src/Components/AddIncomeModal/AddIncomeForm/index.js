@@ -1,1 +1,1 @@
-export { default } from "./AddIncomeForm";
+export { default } from './AddIncomeForm';

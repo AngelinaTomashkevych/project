@@ -1,10 +1,9 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { combineReducers } from "@reduxjs/toolkit";
+import { configureStore, combineReducers } from '@reduxjs/toolkit';
 
-import { toggleModal } from "./redusers";
+import { toggleModal } from './redusers';
 
 const rootReducer = combineReducers({
-  modal_data: toggleModal,
+  modalData: toggleModal,
 });
 
 export const store = configureStore({

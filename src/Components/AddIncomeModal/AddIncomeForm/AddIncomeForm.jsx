@@ -1,11 +1,12 @@
-import { useFormContext } from "react-hook-form";
-import { useDispatch } from "react-redux";
+import { useFormContext } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
 
-import { closeModal } from "redux/actions";
+import { closeModal } from 'redux/actions';
 
-import InputText from "Components/InputText";
+import InputText from 'Components/Input/InputText';
+import InputNumber from 'Components/Input/InputNumber';
 
-import { FIELD_NAMES } from "../constants";
+import { FIELD_NAMES } from '../constants';
 
 function AddIncomeForm() {
   const { handleSubmit } = useFormContext();
@@ -20,7 +21,8 @@ function AddIncomeForm() {
 
   return (
     <form onSubmit={handleSubmit(submitForm)}>
-      <InputText name={FIELD_NAMES.NAME} htmlFor="Название" isRequired/>
+      <InputText name={FIELD_NAMES.NAME} htmlFor="Название" isRequired />
+      <InputNumber name={FIELD_NAMES.QUATITY} htmlFor="Сумма" isRequired />
       <button type="submit">submit</button>
     </form>
   );

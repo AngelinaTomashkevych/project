@@ -1,9 +1,9 @@
-import MoneyCard from "Components/MoneyCard";
-import { useDispatch } from "react-redux";
+import MoneyCard from 'Components/MoneyCard';
+import { useDispatch } from 'react-redux';
 
-import { addIncomeModalName } from "constants/modalNames";
+import { addIncomeModalName } from 'constants/modalNames';
 
-import { openModal } from "redux/actions";
+import { openModal } from 'redux/actions';
 
 function Income() {
   const dispatch = useDispatch();

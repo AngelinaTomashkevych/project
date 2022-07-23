@@ -1,3 +1,4 @@
 export const FIELD_NAMES = {
-  NAME: "name",
+  NAME: 'name',
+  QUATITY: 'quantity',
 };

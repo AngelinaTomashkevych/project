@@ -1,4 +1,4 @@
-import styles from "./MoneyCard.module.scss";
+import styles from './MoneyCard.module.scss';
 
 function MoneyCard() {
   return (

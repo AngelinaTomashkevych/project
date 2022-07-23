@@ -1,3 +1,3 @@
 export const ERRORS = {
-  REQUIRED: "обязательное поле",
+  REQUIRED: 'обязательное поле',
 };

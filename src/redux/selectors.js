@@ -1,1 +1,1 @@
-export const getModalName = ({modal_data}) => modal_data
+export const getModalName = ({ modalData }) => modalData;

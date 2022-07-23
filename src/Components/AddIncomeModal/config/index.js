@@ -1,2 +1,2 @@
-export { resolver } from "./resolver";
-export { defaultValues } from "./defaultValues";
+export { resolver } from './resolver';
+export { defaultValues } from './defaultValues';
