@@ -1,0 +1,32 @@
+@import 'common/styles';
+
+.modalBackDrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $modal-backdrop-color;
+    width: 100vw;
+    height: 100vh;
+}
+
+.modal {
+    position: absolute;
+    border-radius: 5px;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    background-color: $modal-background-color;
+    transform: translate(-50%, -50%);
+}
+
+.closeButton {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: $modal-close-button-color;
+    border: none;
+}
