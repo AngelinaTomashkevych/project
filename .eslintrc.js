@@ -22,4 +22,7 @@ module.exports = {
     'react/require-default-props': 'error',
     semi: 'off',
   },
+  globals: {
+    consoleLog: 'readOnly',
+  },
 };
