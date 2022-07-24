@@ -31,7 +31,7 @@ function Input(props) {
         type={type}
         name={name}
         {...register(name, {
-          required: true,
+          required: isRequired,
         })}
         {...rest}
       />

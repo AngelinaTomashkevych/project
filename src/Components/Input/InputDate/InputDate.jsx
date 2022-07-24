@@ -4,6 +4,12 @@ import Calendar from 'react-calendar';
 import { useState } from 'react';
 import { useFormContext } from 'react-hook-form';
 
+import {
+  toTimeStampInMilliseconds,
+  dateNowInMilliseconds,
+  timeStampToDate,
+} from 'helpers/dateTimes';
+
 import Input from '../Input';
 
 import 'react-calendar/dist/Calendar.css';
@@ -12,15 +18,16 @@ import styles from './InputDate.module.scss';
 function InputDate(props) {
   const { name } = props;
   const { setValue } = useFormContext();
-  // FIXME: new Date() to format
-  const [value, onChange] = useState(new Date());
+
+  const [value, onChange] = useState(dateNowInMilliseconds());
   const [isVisible, setVisible] = useState(false);
 
   const focusHandler = () => setVisible(true);
 
-  const calendarHandler = (value) => {
-    onChange(value);
-    setValue(name, value);
+  const calendarHandler = (date) => {
+    const timeStamp = toTimeStampInMilliseconds(date);
+    onChange(timeStamp);
+    setValue(name, timeStampToDate(timeStamp));
     setVisible(false);
   };
 
@@ -30,7 +37,7 @@ function InputDate(props) {
       {isVisible && (
         <Calendar
           onClickDay={calendarHandler}
-          value={value}
+          value={new Date(value)}
           className={styles.calendar}
         />
       )}
