@@ -2,6 +2,8 @@ import { createPortal } from 'react-dom';
 import { useDispatch } from 'react-redux';
 
 import { closeModal } from 'redux/actions';
+// TODO: Create image component with props
+import { ReactComponent as Cross } from 'images/cross.svg';
 
 import styles from './ModalProvider.module.scss';
 
@@ -26,7 +28,16 @@ function ModalProvider({ children }) {
           onClick={closeModalHandler}
           className={styles.closeButton}
         >
-          x
+          {/* TODO: Create image component with props */}
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alingnItems: 'center',
+            }}
+          >
+            <Cross width={12} height={12} fill="rgb(0, 0, 0, 0.5)" />
+          </div>
         </button>
         <div className={styles.modal} onClick={stopPropagationHandler}>
           <div>{children}</div>
