@@ -31,4 +31,9 @@
     height: 50px;
     background-color: $modal-close-button-color;
     border: none;
+    cursor: pointer;
+}
+
+.closeButton:active {
+    transform: scale(0.9);
 }
