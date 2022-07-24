@@ -12,3 +12,14 @@ $input-error-focus-box-shadow: 0 0 0 2px red;
 
 // fonts colors
 $error-message-color: red;
+$submit-button-font-color: #fff;
+
+// button colors
+$submit-button-color: rgba(0, 128, 128, 0.8);
+$submit-button-hover-color: rgba(0, 128, 128, 1);
+
+// timing functions
+$button-timing-function: 100ms cubic-bezier(0.3, 0.1, 0.5, 1);
+
+// box shadows
+$button-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.75);

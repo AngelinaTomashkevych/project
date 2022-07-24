@@ -1,0 +1,21 @@
+@import 'common/styles';
+
+.button {
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: $submit-button-color;
+    color: $submit-button-font-color;
+    box-shadow: $button-box-shadow;
+    transition: background-color $button-timing-function;
+}
+
+.button:hover {
+    background-color: $submit-button-hover-color;
+}
+
+.button:active {
+    transform: scale(0.9);
+}
