@@ -1,0 +1,11 @@
+.button {
+    margin-bottom: 10px;
+}
+
+.cardWrapper {
+    display: flex;
+
+    & :not(:last-child) {
+        margin-right: 10px;
+    }
+}

@@ -1,19 +1,59 @@
+import PropTypes from 'prop-types';
+import { memo } from 'react';
+import { useDispatch } from 'react-redux';
+
+import { addIncomeModalName } from 'constants/modalNames';
+
+import { timeStampToDate } from 'helpers/dateTimes';
+
+import { openModal } from 'redux/actions';
+import { deleleteIncome } from 'redux/operations';
+
 import styles from './MoneyCard.module.scss';
 
-function MoneyCard() {
+function MoneyCard(props) {
+  const { quantity, date, name, id } = props;
+
+  const dispatch = useDispatch();
+
+  const cardHandler = () => {
+    dispatch(
+      openModal({
+        name: addIncomeModalName,
+        props: { name, quantity, date, id },
+      })
+    );
+  };
+
+  const deleteHandler = (event) => {
+    event.stopPropagation();
+
+    dispatch(deleleteIncome({ id }));
+  };
+
   return (
-    <div className={styles.card}>
-      <h3>Зарпата</h3>
-      <div>
+    <div className={styles.card} onClick={cardHandler}>
+      <h3 className={styles.title}>{name}</h3>
+      <div className={styles.summ}>
         <div>Сумма</div>
-        <div>10000</div>
+        <div>{quantity}</div>
       </div>
       <div>
         <div>Дата</div>
-        <div>20.05.2022</div>
+        <div>{timeStampToDate(date)}</div>
       </div>
+      <button type="button" onClick={deleteHandler}>
+        del
+      </button>
     </div>
   );
 }
 
-export default MoneyCard;
+MoneyCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  quantity: PropTypes.number.isRequired,
+  date: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired,
+};
+
+export default memo(MoneyCard);

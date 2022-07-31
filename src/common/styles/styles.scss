@@ -1,6 +1,7 @@
 // modal colors
 $modal-backdrop-color: rgb(0, 0, 0, 0.5);
 $modal-close-button-color: rgb(255, 255, 255, 0.3);
+$modal-close-button-hover-color: rgb(255, 255, 255, 0.4);
 $modal-background-color: #ffffff;
 
 
@@ -23,3 +24,6 @@ $button-timing-function: 100ms cubic-bezier(0.3, 0.1, 0.5, 1);
 
 // box shadows
 $button-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
+$money-card-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);

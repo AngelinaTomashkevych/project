@@ -1,9 +1,10 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 
-import { toggleModal } from './redusers';
+import { toggleModal, financeService } from './redusers';
 
 const rootReducer = combineReducers({
   modalData: toggleModal,
+  financeService,
 });
 
 export const store = configureStore({

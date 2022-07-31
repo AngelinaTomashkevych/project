@@ -23,6 +23,9 @@
 }
 
 .closeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 20px;
     right: 20px;
@@ -32,6 +35,12 @@
     background-color: $modal-close-button-color;
     border: none;
     cursor: pointer;
+    color: $modal-backdrop-color;
+    transition: background-color $button-timing-function;
+}
+
+.closeButton:hover {
+    background-color: $modal-close-button-hover-color;
 }
 
 .closeButton:active {

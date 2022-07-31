@@ -1,5 +1,25 @@
+@import 'common/styles';
+
 .card {
     display: flex;
     align-items: baseline;
-    border: 1px solid red;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: max-content;
+    box-shadow: $money-card-box-shadow;
+    cursor: pointer;
+    transform: scale(1);
+    transition: all $button-timing-function;
+
+    & :not(:last-child) {
+        margin-right: 5px;
+    }
+
+    &:hover {
+        transform: scale(1.03);
+        background-color: $submit-button-color;
+        color: $submit-button-font-color;
+        border-color: $submit-button-color;
+    }
 }
